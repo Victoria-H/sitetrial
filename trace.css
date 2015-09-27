@@ -1,0 +1,54 @@
+/* trace letters */
+
+body {
+	overflow:auto;
+	background-color:#615192; 
+}
+
+
+#cont {
+	text-align:center;
+}
+
+#character {
+	display:inline-block;
+	width:600px;
+	height:600px;
+	background-color:#615192;
+	margin:70px;
+	position:relative;
+}
+
+.hatch, .s {
+	position:absolute;
+	background-color:#261758;
+	width:100px;
+	height:90px;
+}
+
+.s {
+	background-color:transparent;
+	z-index:4;
+}
+
+.last{
+	width:600px;
+	height:600px;
+	z-index:3;
+}
+
+.trans {
+ background-color: transparent;
+}
+
+.imgcont {
+	position:absolute;
+	z-index:2;
+}
+
+#s17 {
+	width:600px;
+	height:600px;
+	z-index:3;
+}
+

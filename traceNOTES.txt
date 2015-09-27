@@ -1,0 +1,119 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="trace.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+
+
+<body>
+<div class="trace">
+<div id="im1" class="im ">fbdsf</div>
+<div id="im2" class="im "></div>
+<div id="im3" class="im "></div>
+<div id="im4" class="im "></div>
+</div>
+
+<div class="traceD">
+<div id="imD1" class="imD"></div>
+<div id="imD2" class="imD"></div>
+<div id="imD3" class="imD"></div>
+<div id="imD4" class="imD"></div>
+</div>
+
+
+
+<script>
+//this adds the event listener to all the elements that make up the image.
+var classname = document.getElementsByClassName("im");
+
+    for(var i=0;i<classname.length;i++){
+        classname[i].addEventListener('mouseover', change, false);
+		//classname[i].addEventListener('touchmove', change, false);
+    }
+
+
+// sets starting point
+var D=1 ;
+
+// changes property according to starting point
+function change() { 
+
+	next="im"+D ;
+	if (next==this.id) {
+	this.style.backgroundColor = 'red';
+	// alert(x.id);
+	D++;
+	//alert(D)
+	}
+	
+}
+
+</script>
+<br>
+
+<div id="main">
+    <span class='catch' id="id1">One</span>
+    <span class='catch' id="id2">Two</span>
+    <span class='catch' id="id3">Three</span>
+    <span class='catch' id="id4">Four</span>
+    <span class='catch' id="id5">Five</span>
+    <span class='catch' id="id6">Six</span>
+    <span class='catch' id="id7">Seven</span>
+</div>
+
+<div id="second">
+    <span class='hatch' id="i1">One</span>
+    <span class='hatch' id="i2">Two</span>
+    <span class='hatch' id="i3">Three</span>
+    <span class='hatch' id="i4">Four</span>
+    <span class='hatch' id="i5">Five</span>
+    <span class='hatch' id="i6">Six</span>
+    <span class='hatch' id="i7">Seven</span>
+</div>
+
+<p id="pos"></p>
+
+<script>
+
+
+    
+var Done=1 ;
+
+$('.hatch').bind('touchmove', function (evt) {
+    var touch = evt.originalEvent.touches[0];
+    	
+	var next="i"+Done ;
+     //alert(next)   
+    var el = $(document.elementFromPoint(touch.clientX, touch.clientY));
+     // alert(el.attr('id'));  
+    if (el.attr('id')==next) {
+        //$('.hatch').removeClass('green');
+        el.addClass('green');
+        Done++;
+    }
+    
+ 
+});
+
+var Done2=1
+
+$('.catch').mouseover(function() {
+   var next="id"+Done2 ;
+   var showID = $(this).attr("id");
+   if (showID==next) {
+   $(this).addClass('green');
+   Done2++;
+   }
+});
+</script>
+</body>
+
+
+
+
+
+
+</html>

@@ -7,6 +7,11 @@
 </head>
 
 <body>
+<header>
+<img class="apple" src="img/apple.png" width="100px">
+</header>
+
+
 <p>Collect and test html resources for our project here</p>
 
 <ul>
@@ -14,6 +19,30 @@
 <li><a href="position.html">trace character</a></li>
 <li><a href="index.html">home</a></li>
 </ul>
+<div class="container" id="container">
+<img class="button" id="leon" src="img/leon.png">
+<img class="buttonover" id="leon2" src="img/leon2.png">
+</div>
+<div class="container" id="container2">
+<img class="button" id="sientje" src="img/sientje.png">
+<img class="buttonover" id="sientje2" src="img/sientje2.png">
+</div>
+
+
+<script>
+$("#container").hover(function(){
+		 $("#leon2").css("display", "block");
+		 },
+	 function() {
+         $("#leon2").css("display", "none");
+});
+$("#container2").hover(function(){
+		 $("#sientje2").css("display", "block");
+		 },
+	 function() {
+         $("#sientje2").css("display", "none");
+});
+</script>
 </body>
 
 </html>

@@ -1,8 +1,33 @@
 /* trace letters */
 
 body {
-	overflow:auto;
-	background-color:#615192; 
+	overflow:auto;	 
+	background-image: url("img/background.png");
+	background-color:#615192;
+	background-size: 200px;
+	
+   
+}
+
+.apple {
+	width=100px;
+	
+}
+
+.button, .buttonover {
+	position:absolute;
+	width:300px;
+}
+
+#leon2 {
+	display:none;
+}
+
+.container {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	display: inline-block;
 }
 
 
@@ -24,6 +49,7 @@ body {
 	background-color:#261758;
 	width:100px;
 	height:90px;
+	border-radius:20px;
 }
 
 .s {
